@@ -1,0 +1,14 @@
+Install Instructions
+~~~~~~~~~~~~~~~~~~~~
+
+This hopefully should be quite straight forward.
+
+(1) Unpack php-ices into your webservers root.
+(2) Create a temp directory in php-ices. Something like /var/www/html/php-ices/temp
+(3) Make the temp directory writeable to the webserever process. Something like chmod 666 /var/www/html/php-ices/temp or chown apache /var/www/html/php-ices/temp
+(4) Edit config php to meet your needs ;-) At the very least set the stream password on line 31 !
+(5) Point your Web browser at php-ices !
+
+Good Luck :-D,
+[NICK]
+

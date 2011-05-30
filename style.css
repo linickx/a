@@ -1,0 +1,51 @@
+.BlueBox {
+	margin-left: 1em;
+	margin-right: 2em;
+	padding: .5em;
+
+	
+	background-color: #e4e7ea;
+	border: 1px dashed #163858;
+	font-family: monospace;
+}
+
+TABLE {
+	min-width: 600px;
+        max-width: 800px;
+}
+
+BODY {
+	background-color: #ffffff;
+	color: #000000;
+	font-family: sans-serif;
+	font-size: 10pt;
+	padding: 0px;
+}
+
+.Title {
+	border: 1px groove grey;
+	min-width: 600px;
+	max-width: 600px;
+}
+
+.TableTitle {
+	background-color: #f0f0f8;
+}
+
+A {
+        text-decoration: none;
+        border: 1px none #ffffff;
+}
+
+A:link, A:visited {
+        border: 1px solid #f0f0ff;
+        background-color: transparent;
+        color: #666699;
+}
+
+A:hover {
+        background-color: #f0f0f8;
+        color: #333366;
+        border: 1px solid #d0d0f8;
+}
+

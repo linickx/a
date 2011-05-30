@@ -1,0 +1,475 @@
+/*
+Theme Name: K2 for bbPress
+Theme URI: http://www.linickx.com/blog/archives/253/k2-for-bbpress/
+Description: A port of the famous k2 to bbpress
+Version: 0.01 theta-beta
+Author: Nick [LINICKX] Bettison
+Author URI: http://www.linickx.com
+*/
+
+/*
+Derrived from Bryan Veloso orriginal style sheet that ships with bbpress, added a little style from the sheet availble from http://getk2.com, copyright of that to the people at http://binarybonsai.com !
+*/
+
+/* Globals 
+=================================== */
+
+* { margin: 0; padding: 0; }
+
+body {
+	font: 62.5% 'Lucida Grande', Verdana, Arial, Sans-Serif; /* 62.5% sets 1em to about 10px */
+	background: #EDEDED;
+	color: #444;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+a { color: #27d; text-decoration: none; }
+a:hover { color: #27d; text-decoration: underline; }
+
+.alt { background: #fff; }
+
+code { font: 1.0em Monaco, 'Courier New', monospace; }
+
+p { margin-bottom: 1.0em; }
+
+.left { float: left; }
+
+.right { float: right; }
+
+.delete:hover {
+	background: #c00;
+	color: #fff;
+}
+
+h1 { font-size: 2em; }
+
+h2 { font-size: 1.5em; }
+
+/* Structure
+=================================== */
+
+#wrapper {
+	width: 780px; /* controls the main width of the page, if changed also change #content and .sidebar */
+	margin: 0 auto;
+	padding: 20px 0 10px 0;
+	border: 1px solid #ddd;
+	border-top: none;
+	background: white;
+	text-align: left;
+	}
+
+#header {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	height: 200px;
+	background: #3371A3; /* header color default is #3371A3, for images - background-image: url(example.jpg); */
+	}
+
+h1, h2, h3, h4 {
+	font-family: 'Trebuchet MS', Verdana, Sans-Serif;
+	}
+	
+#header h1 { 
+	font-size: 3em;
+	font-weight: bold;
+	letter-spacing: -1px;
+	margin: 0;
+	padding: 75px 0 0 40px;
+}
+
+#header p { margin-bottom: 0; }
+
+#header h1 a, #header h1 a:visited { color: #fff; text-decoration: none; }
+#header h1 a:hover, #header h1 a:active{ text-decoration: underline; }
+
+#main { 
+	font-size: 1.2em;
+	width: 760px;
+	margin: 10px auto 25px;
+	position: relative;
+}
+
+.bbcrumb {
+	text-transform: uppercase;
+	font-size: 0.9em;
+	letter-spacing: 1px;
+}
+
+#footer { 
+	margin: auto;
+	color: #666;
+	font-size: 1.0em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	padding-top: 20px;
+	clear: both; 
+	text-align: center;
+	width: 760px; 
+}
+
+#footer a:link, #footer a:visited { /* more link link color fixes for nav & admin stuff */
+	color: #777;
+	text-decoration: none;
+	font-weight: bold;
+	}
+
+#footer a:hover, #footer a:active {
+	color: #000;
+	text-decoration: underline;
+	font-weight: bold;
+	}	
+
+.notice { 
+	border: 2px solid #4c9545; 
+	background: #abd8a2; 
+	color: #4c9545; 
+	font-size: 1.1em; 
+	font-weight: bold;
+	padding: 10px 15px; 
+	margin: 0 0 1.1em; 
+}
+
+.notice p { margin-bottom: 0; }
+
+/* Login Form
+=================================== */
+
+.login { 
+	color: #fff;
+	margin: 10px 40px;
+}
+
+.login a, .login a:visited { color: #fff; text-decoration: none; }
+.login a:hover, .login h1 a:active{ text-decoration: underline; }
+
+
+.login p { padding: 0 0 5px; }
+
+.login label {
+	display: block;
+	float: left;
+	padding-right: 10px;
+}
+
+.login #submit {
+	font-size: 1.2em;
+	margin-top: 13px;
+	float: left;
+}
+
+p.login {
+	font-weight: normal;
+	font-size: 1.2em;
+}
+
+form.login input { 
+	margin-top: 3px;
+	border: 1px solid #999;
+}
+
+
+/* Front Page
+=================================== */
+
+#front-page #hottags { 
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150px;
+	overflow: hidden;
+}
+
+#front-page #discussions { 
+	margin-left: 170px;
+	width: 590px;
+}
+
+.frontpageheatmap {
+	font-weight: normal;
+	line-height: 30px;
+	padding-bottom: 10px;
+}
+
+#front-page #main h2, h2.post-form, #userlogin, #currentfavorites, #register {
+	color: #333;
+	border-bottom: 1px solid #ddd;
+	margin: 0 0 10px;
+	padding: 0 0 5px;
+}
+
+#front-page #discussions ul { padding: 0 0 0 14px; }
+
+.sticky { 
+	background: #EDEDED; 
+	}
+	
+
+
+/* Topic Page
+=================================== */
+
+.infobox {
+	border: 1px solid #ccc;
+	border-width: 1px 0;
+	padding: 1em;
+}
+
+.infobox ul {
+	margin: 10px 0 10px 12px;
+	padding: 0;
+}
+
+.infobox ul li { padding-bottom: 3px; }
+
+#topic-tags {
+	border-left: 1px solid #ccc;
+	float: right;
+	margin-top: -2em;
+	padding: 0 1em 1em;
+}
+
+.nav {
+	margin: 15px 0;
+	padding: 12px 0;
+}
+
+.nav span { font-weight: bold; }
+
+.nav span, .nav a { padding: 6px; }
+
+#thread {
+	background: #eee;
+	list-style: none;
+	margin: 0 0 0 100px;
+	padding: 0;
+}
+
+#thread li {
+	padding: 1.5em 1.0em;
+	line-height: 1.5em;
+}
+
+#thread li ol, #thread li ul { margin-left: 40px; }
+
+#thread li ol li, #thread li ul li { padding: 0; }
+
+.threadauthor {
+	margin-left: -110px;
+	overflow: hidden;
+	position: absolute;
+	width: 95px;
+}
+
+.threadauthor small { font: 11px Verdana, Arial, Helvetica, sans-serif; }
+
+.poststuff {
+	border-top: 1px dotted #ccc;
+	margin: 10px 0 0;
+	padding: 5px 0 0;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+
+.num, #forumlist small {
+	font: 11px Verdana,Arial,Helvetica,sans-serif;
+	text-align: center;
+}
+
+.postform {
+	background: #fff;
+	padding: 1em;
+}
+
+.postform textarea {
+	height: 12em;
+	margin: 5px 0;
+	padding: 5px;
+	width: 720px;
+	display: block;
+}
+
+.postform label { display: block; }
+
+.admin { padding: 10px 0 0; }
+
+#manage-tags { 
+	margin: 10px 0; 
+	list-style: none; 
+}
+
+#manage-tags li {
+	float: left;
+	width: 200px;
+	padding-bottom: 10px;
+}
+
+.submit { text-align: right; }
+
+.topiclink { display: block; }
+
+.topictitle {
+	font-size: 26px;
+	font-weight: normal;
+	display: inline;
+}
+
+/* Other
+=================================== */
+
+#content .frontpageheatmap a {
+	font-weight: normal;
+	text-decoration: none;
+}
+
+#content .infobox li { margin-bottom: 2px; }
+
+#content .nav a {
+	border: 1px solid #ccc;
+	font-weight: normal;
+}
+#content .nav a:hover {
+	border: 1px solid #999;
+}
+#content a:visited {
+	font-weight: normal;
+}
+
+#front-search {
+	float: right;
+	margin-top: -8px;
+}
+
+#latest td, #forumlist td, #favorites td { padding: 5px 10px; }
+
+#latest tr:hover, #forumlist tr:hover, #favorites tr:hover { background: #cbd9e4; }
+
+#latest th, #forumlist th, #favorites th {
+	/* border-bottom: 1px solid #aaa; */
+	background: #3371A3;
+	color: #fff;
+	padding: 5px 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#latest th a:link, #latest th a:visited, #latest th a:active {
+	color:#fff;
+}
+
+#latest, #forumlist, #favorites {
+	background: #f7f7f7;
+	margin-bottom: 2em;
+	width: 100%;
+}
+
+.bozo { background: #eeee88; }
+
+.alt.bozo { background: #ffff99; }
+
+.deleted { background: #ee8888; }
+
+.alt.deleted { background: #ff9999; }
+
+/* Profile Page
+=================================== */
+
+#profile-menu {
+	margin: -35px 0px;
+	padding: 0 0 30px 0;
+	float:right;
+}
+
+#profile-menu ul {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	bottom: 0;
+	left: 20px;
+	width: 90%;
+	}
+
+#profile-menu li {
+	display: inline;
+	margin: 0;
+	}
+
+#profile-menu,
+#profile-menu li a {
+	padding: 5px 15px 6px;
+	}
+
+#profile-menu li a {
+	font-size: 1em;
+	color: white;
+	margin: 0;
+	}
+
+#profile-menu li a:hover {
+	background: #333;
+	color: #eee !important;
+	text-decoration: none;
+	}
+
+#profile-menu li.current a,
+ul.menu li.current a:hover {
+	color: #333 !important;
+	background: white;
+	text-decoration: none;
+	}
+
+#userinfo { margin-top: 10px; }
+
+#userinfo dt { font-weight: bold; }
+
+#userinfo dd { margin: 0 0 5px; } 
+
+#useractivity { margin: 15px 0 5px; }
+
+.user-recent { margin: 0 0 10px; }
+
+.user-recent ol { margin: 5px 0 0 28px; }
+
+.user-recent ol li { margin: 0 0 3px; }
+
+/* Profile Edit
+=================================== */
+
+fieldset { 
+	border-top: 3px double #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: none;
+	border-right: none;
+	padding: 10px 0 10px 10px; 
+	margin-bottom: 15px;
+	width: 720px;
+}
+
+legend { 
+	font-weight: bold;
+	padding: 0 15px;
+}
+
+fieldset table { 
+	text-align: left;
+	margin: 0 15px;
+}
+
+fieldset table td { padding: 2px 0; }
+
+fieldset p { 
+	font-size: 11px;
+	margin: 10px 16px;
+}
+
+/* further additions by Nick  */
+
+
+/* this is for my 48 x 48 avatars */
+.post {
+	min-height: 60px;
+}
+
+
+

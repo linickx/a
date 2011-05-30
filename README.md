@@ -1,3 +1,3 @@
 # k2 for bbPress #
 
-Released back in **2007**,  [k2 for bbPress Version 0.01](http://www.linickx.com/253/k2-for-bbpress) was a stylesheet dropin for the old bbPress forum platform.
+Updated in **2008** [version 0.02](http://www.linickx.com/402/k2-for-bbpress-updated-v002) was a re-write to cater for major changes in bbPress 

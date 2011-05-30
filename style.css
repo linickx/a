@@ -2,14 +2,17 @@
 Theme Name: K2 for bbPress
 Theme URI: http://www.linickx.com/blog/archives/253/k2-for-bbpress/
 Description: A port of the famous k2 to bbpress
-Version: 0.01 theta-beta
+Version: 0.02 updated for bbPress 0.9.0.1
 Author: Nick [LINICKX] Bettison
 Author URI: http://www.linickx.com
 */
 
 /*
-Derrived from Bryan Veloso orriginal style sheet that ships with bbpress, added a little style from the sheet availble from http://getk2.com, copyright of that to the people at http://binarybonsai.com !
+Derrived from Bryan Veloso orriginal style sheet that ships with bbpress, added 
+a little style from the sheet availble from http://getk2.com, copyright of that 
+to the people at http://binarybonsai.com !
 */
+
 
 /* Globals 
 =================================== */
@@ -26,10 +29,9 @@ body {
 
 a { color: #27d; text-decoration: none; }
 a:hover { color: #27d; text-decoration: underline; }
+.alt { background-color: #fff; }
 
-.alt { background: #fff; }
-
-code { font: 1.0em Monaco, 'Courier New', monospace; }
+pre, code { font: 1.0em Monaco, 'Courier New', monospace; }
 
 p { margin-bottom: 1.0em; }
 
@@ -38,13 +40,29 @@ p { margin-bottom: 1.0em; }
 .right { float: right; }
 
 .delete:hover {
-	background: #c00;
+	background-color: #c00;
 	color: #fff;
 }
 
 h1 { font-size: 2em; }
 
 h2 { font-size: 1.5em; }
+
+fieldset {
+	border-width: 0;
+	padding: 0;
+	margin: 0;
+}
+
+img.avatar { border: 1px solid #ddd; }
+
+.bozo { background-color: #eeee88; }
+
+.alt.bozo { background-color: #ffff99; }
+
+.deleted { background-color: #ee8888; }
+
+.alt.deleted { background-color: #ff9999; }
 
 /* Structure
 =================================== */
@@ -57,7 +75,7 @@ h2 { font-size: 1.5em; }
 	border-top: none;
 	background: white;
 	text-align: left;
-	}
+}
 
 #header {
 	padding: 0;
@@ -65,26 +83,25 @@ h2 { font-size: 1.5em; }
 	position: relative;
 	height: 200px;
 	background: #3371A3; /* header color default is #3371A3, for images - background-image: url(example.jpg); */
-	}
+}
 
 h1, h2, h3, h4 {
 	font-family: 'Trebuchet MS', Verdana, Sans-Serif;
 	}
-	
+
 #header h1 { 
 	font-size: 3em;
 	font-weight: bold;
 	letter-spacing: -1px;
 	margin: 0;
-	padding: 75px 0 0 40px;
+	padding: 45px 0 0 40px;
 }
-
 #header p { margin-bottom: 0; }
 
 #header h1 a, #header h1 a:visited { color: #fff; text-decoration: none; }
 #header h1 a:hover, #header h1 a:active{ text-decoration: underline; }
 
-#main { 
+#main {
 	font-size: 1.2em;
 	width: 760px;
 	margin: 10px auto 25px;
@@ -95,6 +112,7 @@ h1, h2, h3, h4 {
 	text-transform: uppercase;
 	font-size: 0.9em;
 	letter-spacing: 1px;
+	padding: 5px 0 20px;
 }
 
 #footer { 
@@ -120,15 +138,14 @@ h1, h2, h3, h4 {
 	text-decoration: underline;
 	font-weight: bold;
 	}	
-
-.notice { 
-	border: 2px solid #4c9545; 
-	background: #abd8a2; 
-	color: #4c9545; 
-	font-size: 1.1em; 
+.notice {
+	border: 2px solid #4c9545;
+	background-color: #abd8a2;
+	color: #4c9545;
+	font-size: 1.1em;
 	font-weight: bold;
-	padding: 10px 15px; 
-	margin: 0 0 1.1em; 
+	padding: 10px 15px;
+	margin: 0 0 1.1em;
 }
 
 .notice p { margin-bottom: 0; }
@@ -136,7 +153,7 @@ h1, h2, h3, h4 {
 /* Login Form
 =================================== */
 
-.login { 
+.login {
 	color: #fff;
 	margin: 10px 40px;
 }
@@ -145,35 +162,52 @@ h1, h2, h3, h4 {
 .login a:hover, .login h1 a:active{ text-decoration: underline; }
 
 
-.login p { padding: 0 0 5px; }
+form.login {
+	bottom: 15px;
+}
+
+.login p { padding: 0 0 4px; }
 
 .login label {
 	display: block;
 	float: left;
 	padding-right: 10px;
+	line-height: 14px;
 }
 
-.login #submit {
-	font-size: 1.2em;
-	margin-top: 13px;
-	float: left;
-}
-
-p.login {
-	font-weight: normal;
-	font-size: 1.2em;
-}
-
-form.login input { 
-	margin-top: 3px;
+form.login input {
 	border: 1px solid #999;
+	padding: 2px;
+	line-height: 14px;
+	font-size: 12px;
+	margin: 0;
 }
 
+form.login input#submit {
+	float: left;
+	margin-top: 14px;
+	margin-bottom: -10px;
+	display: block;
+}
+
+div.remember label {
+	clear: both;
+	padding: 0;
+	margin: 6px 0 0 0;
+	line-height: 12px;
+}
+
+form.login input#remember {
+	border-width: 0;
+	padding: 0;
+	margin: 0;
+	vertical-align: baseline;
+}
 
 /* Front Page
 =================================== */
 
-#front-page #hottags { 
+#front-page #hottags {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -181,7 +215,7 @@ form.login input {
 	overflow: hidden;
 }
 
-#front-page #discussions { 
+#front-page #discussions {
 	margin-left: 170px;
 	width: 590px;
 }
@@ -192,7 +226,7 @@ form.login input {
 	padding-bottom: 10px;
 }
 
-#front-page #main h2, h2.post-form, #userlogin, #currentfavorites, #register {
+#front-page #main h2, #forum-page #main h2, h2.post-form, #userlogin, #currentfavorites, #register {
 	color: #333;
 	border-bottom: 1px solid #ddd;
 	margin: 0 0 10px;
@@ -201,11 +235,7 @@ form.login input {
 
 #front-page #discussions ul { padding: 0 0 0 14px; }
 
-.sticky { 
-	background: #EDEDED; 
-	}
-	
-
+.sticky { background-color: #EDEDED; }
 
 /* Topic Page
 =================================== */
@@ -223,11 +253,15 @@ form.login input {
 
 .infobox ul li { padding-bottom: 3px; }
 
+#topic-info {
+	float: left;
+	padding: 0 1em 0 0;
+}
+
 #topic-tags {
 	border-left: 1px solid #ccc;
 	float: right;
-	margin-top: -2em;
-	padding: 0 1em 1em;
+	padding: 0 0 0 1em;
 }
 
 .nav {
@@ -242,13 +276,15 @@ form.login input {
 #thread {
 	background: #eee;
 	list-style: none;
-	margin: 0 0 0 100px;
+	margin: 0;
 	padding: 0;
 }
 
 #thread li {
-	padding: 1.5em 1.0em;
 	line-height: 1.5em;
+	clear: both;
+	/* Hack to force padding on .threadauthor on IE */
+	border-top: 1px solid #fff;
 }
 
 #thread li ol, #thread li ul { margin-left: 40px; }
@@ -256,15 +292,46 @@ form.login input {
 #thread li ol li, #thread li ul li { padding: 0; }
 
 .threadauthor {
-	margin-left: -110px;
-	overflow: hidden;
-	position: absolute;
-	width: 95px;
+	float: left;
+	padding: 1em 1em 0 1em;
+	width: 120px;
 }
+
+.threadauthor p { margin: 0; }
 
 .threadauthor small { font: 11px Verdana, Arial, Helvetica, sans-serif; }
 
+.threadpost {
+	padding: 1.5em 1em;
+	margin-left: 140px;
+	background-color: #eee;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#thread li.alt .threadpost { background-color: transparent; }
+
+#thread li.deleted { background-color: transparent; }
+
+#thread li.deleted .threadpost { background-color: #ee8888; }
+
+#thread li.alt.deleted .threadpost { background-color: #ff9999; }
+
+#thread .post {
+	_height: 90px; /* Hack to fix broken .alt coloring in IE6 */
+}
+
+#thread .post blockquote {
+	margin: 0 0 0 4ex;
+	padding: 0 0 0 1ex;
+	border-left: 5px solid #ccc;
+}
+
 .poststuff {
+	clear:both;
+	_clear: none; /* Hack to fix broken .alt coloring in IE6 */
 	border-top: 1px dotted #ccc;
 	margin: 10px 0 0;
 	padding: 5px 0 0;
@@ -278,8 +345,13 @@ form.login input {
 }
 
 .postform {
-	background: #fff;
+	background-color: #f0f0f0;
 	padding: 1em;
+	margin-bottom: 1em;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
 }
 
 .postform textarea {
@@ -292,11 +364,9 @@ form.login input {
 
 .postform label { display: block; }
 
-.admin { padding: 10px 0 0; }
-
-#manage-tags { 
-	margin: 10px 0; 
-	list-style: none; 
+#manage-tags {
+	margin: 10px 0;
+	list-style: none;
 }
 
 #manage-tags li {
@@ -314,6 +384,17 @@ form.login input {
 	font-weight: normal;
 	display: inline;
 }
+
+.rss-link {
+	display: block;
+	padding: 6px 0;
+	text-indent: 20px;
+	background-image: url('images/feed-icon-16x16.gif');
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+}
+
+#topic-move { margin-top: 1em; }
 
 /* Other
 =================================== */
@@ -343,81 +424,68 @@ form.login input {
 
 #latest td, #forumlist td, #favorites td { padding: 5px 10px; }
 
-#latest tr:hover, #forumlist tr:hover, #favorites tr:hover { background: #cbd9e4; }
-
-#latest th, #forumlist th, #favorites th {
-	/* border-bottom: 1px solid #aaa; */
-	background: #3371A3;
-	color: #fff;
-	padding: 5px 10px;
-	text-transform: uppercase;
-	font-weight: bold;
+#forumlist tr td div.nest {
+	padding-left: 2.5ex;
 }
 
-#latest th a:link, #latest th a:visited, #latest th a:active {
-	color:#fff;
+#latest tr:hover, #forumlist tr:hover, #favorites tr:hover { background-color: #cbd9e4; }
+
+#latest th, #forumlist th, #favorites th {
+	border-bottom: 1px solid #aaa;
+	background-color: #ddd;
+	font: 11px Verdana,Arial,Helvetica,sans-serif;
+	padding: 5px 10px;
+	text-transform: uppercase;
 }
 
 #latest, #forumlist, #favorites {
-	background: #f7f7f7;
+	background-color: #f7f7f7;
 	margin-bottom: 2em;
 	width: 100%;
 }
-
-.bozo { background: #eeee88; }
-
-.alt.bozo { background: #ffff99; }
-
-.deleted { background: #ee8888; }
-
-.alt.deleted { background: #ff9999; }
 
 /* Profile Page
 =================================== */
 
 #profile-menu {
-	margin: -35px 0px;
-	padding: 0 0 30px 0;
-	float:right;
-}
-
-#profile-menu ul {
-	margin: 0;
-	padding: 0;
+	list-style: none;
 	position: absolute;
-	bottom: 0;
-	left: 20px;
-	width: 90%;
-	}
+	right: 0;
+}
 
 #profile-menu li {
 	display: inline;
-	margin: 0;
-	}
-
-#profile-menu,
-#profile-menu li a {
-	padding: 5px 15px 6px;
-	}
+	margin-left: 3px;
+}
 
 #profile-menu li a {
-	font-size: 1em;
-	color: white;
-	margin: 0;
-	}
+	font-size: 1.1em;
+	padding: 4px 7px;
+	position: relative;
+	top: -10px;
+	-moz-border-radius-bottomleft: 6px;
+	-khtml-border-bottom-left-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-khtml-border-bottom-right-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
 
+#profile-menu li.current a {
+	font-weight:bold;
+}
+
+/*
 #profile-menu li a:hover {
-	background: #333;
-	color: #eee !important;
-	text-decoration: none;
-	}
+	background-color: #e4f3e1;
+}
+*/
 
-#profile-menu li.current a,
-ul.menu li.current a:hover {
-	color: #333 !important;
-	background: white;
-	text-decoration: none;
-	}
+#useravatar { margin-bottom: 1em; }
+
+#useravatar img { display: block; border-width: 3px; border-style: double; }
 
 #userinfo { margin-top: 10px; }
 
@@ -433,43 +501,59 @@ ul.menu li.current a:hover {
 
 .user-recent ol li { margin: 0 0 3px; }
 
-/* Profile Edit
+/* Login, Register, Profile Edit
 =================================== */
 
-fieldset { 
+#login-page fieldset,
+#register-page fieldset,
+#profile-page fieldset {
 	border-top: 3px double #ccc;
 	border-bottom: 1px solid #ccc;
 	border-left: none;
 	border-right: none;
-	padding: 10px 0 10px 10px; 
+	padding: 10px 0 10px 10px;
 	margin-bottom: 15px;
-	width: 720px;
+	background-color: #f6f6f6;
 }
 
-legend { 
+#login-page legend,
+#register-page legend,
+#profile-page legend {
 	font-weight: bold;
 	padding: 0 15px;
 }
 
-fieldset table { 
+#login-page fieldset table,
+#register-page fieldset table,
+#profile-page fieldset table {
 	text-align: left;
 	margin: 0 15px;
+	width: 90%;
 }
 
-fieldset table td { padding: 2px 0; }
+#login-page fieldset table th,
+#register-page fieldset table th,
+#profile-page fieldset table th {
+	padding: 2px;
+	text-align: right;
+	width: 20%;
+}
 
-fieldset p { 
+#login-page fieldset table td,
+#register-page fieldset table td,
+#profile-page fieldset table td {
+	padding: 2px 0;
+}
+
+#login-page fieldset p,
+#register-page fieldset p,
+#profile-page fieldset p {
 	font-size: 11px;
 	margin: 10px 16px;
 }
 
-/* further additions by Nick  */
-
-
-/* this is for my 48 x 48 avatars */
-.post {
-	min-height: 60px;
+#login-page sup.required,
+#register-page sup.required,
+#profile-page sup.required {
+	color: red;
 }
-
-
-

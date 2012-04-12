@@ -8,6 +8,7 @@ Abandoned Projects:
 
 * [k2 for bbPress](https://github.com/linickx/a/tree/k2-for-bbPress)
 * [php-ices](https://github.com/linickx/a/tree/php-ices)
+* [oauth](https://github.com/linickx/a/tree/oauth)
 
 [Get in touch](https://github.com/inbox/new) if you have any questions!
 

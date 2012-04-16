@@ -39,8 +39,8 @@ $output = 'Authorizing...';
 
 // Fill in your API key/consumer key you received when you registered your 
 // application with Google.
-$signatures = array( 'consumer_key'     => 'Sr1HA8XIDBYo7LF9kKBQ',
-                     'shared_secret'    => 'WBo2iC9epWN7BHx4UqShwqwDcrzQcumpWvXzSDa2yU');
+$signatures = array( 'consumer_key'     => TWITTER_CONSUMER_KEY,
+                     'shared_secret'    => TWITTER_CONSUMER_SECRET);
 
 // In step 3, a verifier will be submitted.  If it's not there, we must be
 // just starting out. Let's do step 1 then.

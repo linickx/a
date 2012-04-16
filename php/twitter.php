@@ -58,7 +58,7 @@ if (!isset($_GET['oauth_verifier'])) {
         'path'      => TWITTER_REQUEST_TOKEN_URL,
         'parameters'=> array(
             'scope'         => TWITTER_MENTIONS_API,
-            'oauth_callback'=> 'http://test-linickx.rhcloud.com/twitter.php'),
+            'oauth_callback'=> "$www/twitter.php"),
         'signatures'=> $signatures));
 
     // The above object generates a simple URL that includes a signature, the 

@@ -12,5 +12,7 @@ Abandoned Projects:
 
 [Get in touch](https://github.com/inbox/new) if you have any questions!
 
+Stuff that isn't code can be found in [linickx.com/files](https://www.linickx.com/files/)
+
 Cheers,
 Nick
